@@ -1,0 +1,135 @@
+@font-face {
+    font-family: Gilroy;
+    src: url('../fonts/gilroy-regular.ttf');
+}
+
+body {
+    margin: 0;
+    font-family: Gilroy;
+}
+
+.posts {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 30px;
+    margin: 0 auto;
+    max-width: 1080px;
+    margin-bottom: 30px;
+    padding: 0 20px;
+}
+
+.card-post {
+    background-color: #EEF0F2;
+    border-radius: 10px;
+    min-width: 300px;
+    width: 300px;
+    padding: 0 20px 20px 20px;
+    color: #293241;
+    display: flex;
+    flex-direction: column;
+}
+
+.card-post:last-child {
+    justify-self: start;
+}
+
+.checkbox {
+    margin: auto 0 0 auto;
+    cursor: url(../img/Cursor.svg) 4 12, auto;
+}
+
+.card-post.active {
+    background-color: #2D3645;
+    color: #FFFFFF;
+}
+
+h5 {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-size: 16px;
+    line-height: 18px;
+}
+
+h5::first-letter {
+    text-transform: uppercase;
+}
+
+.text {
+    font-size: 12px;
+    line-height: 14px;
+}
+
+.filter {
+    background-color: #EEF0F2;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
+    height: 70px;
+    margin-bottom: 30px;
+}
+
+.input-filter {
+    padding-right: 10px;
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.filter input[type="text"] {
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.input-filter:focus {
+    outline: 2px solid rgb(0 0 0 / 20%);
+}
+
+.bts-actions {
+    display: flex;
+    gap: 10px;
+}
+
+.bts-actions button {
+    height: 30px;
+    border-radius: 6px;
+    border: none;
+    background-color: #353F4C;
+    color: #FFFFFF;
+    font-family: Gilroy;
+    font-size: 12px;
+    line-height: 14px;
+    min-width: 75px;
+    cursor: url(../img/Cursor.svg) 4 12, auto;
+    box-shadow: 0 3px 1px -2px rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 14%), 0 1px 5px 0 rgb(0 0 0 / 12%);
+}
+
+.bts-actions button:hover {
+    background-color: #2D3645;
+}
+
+.bts-actions button:active {
+    outline: 2px solid rgb(0 0 0 / 20%);
+}
+
+.clear-filters {
+    display: none;
+}
+
+.hidden {
+    display: none;
+}
+
+@media (max-width: 1120px) {
+    .posts {
+        max-width: 710px;
+    }
+}
+
+@media (max-width: 750px) {
+    .posts {
+        justify-content: center;
+    }
+}
